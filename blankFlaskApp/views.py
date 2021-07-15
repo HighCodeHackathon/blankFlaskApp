@@ -5,15 +5,22 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import render_template
 from blankFlaskApp import app
+from blankFlaskApp import model
+
+
 
 @app.route('/')
 @app.route('/home')
 def home():
+    """Perform Data Collection"""
+    cardNO1 = model.PostingCard.generateCard("RAF Leeming", "Abandon all hope all ye who enter", "https://via.placeholder.com/468x300?text=Card" )
+
     """Renders the home page."""
     return render_template(
         'index.html',
-        title='Home Page',
+        title='POSTIN',
         year=datetime.now().year,
+        card=cardNO1,
     )
 
 @app.route('/contact')
