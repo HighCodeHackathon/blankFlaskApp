@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://go.microsoft.com/fwlink/?linkid=2134798
 # More GitHub Actions for Azure: https://go.microsoft.com/fwlink/?linkid=2135048
 
-name: Azure App Service - Scousetest3(Production), Build and deploy Python app
+name: Azure App Service - HackathonWA(Production), Build and deploy Python app
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
       with:
-        app-name: Scousetest3
+        app-name: HackathonWA
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F1FCEFEBC2243E3B3148C9DE023AE77 }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7FC859D7D9C421BB06AE839C8612C66 }}
 
